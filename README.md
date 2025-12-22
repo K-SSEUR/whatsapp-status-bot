@@ -35,7 +35,19 @@ WhatsApp bot, WhatsApp status bot, WhatsApp automation, Baileys bot, Node.js Wha
 
 ## 📦 Installation
 
+Termux:
+
 ```bash
+pkg install nodejs -y
+git clone https://github.com/Dev-ixAAr/whatsapp-status-bot.git
+cd whatsapp-status-bot
+npm install
+```
+
+VPS:
+
+```bash
+sudo apt install -y nodejs
 git clone https://github.com/Dev-ixAAr/whatsapp-status-bot.git
 cd whatsapp-status-bot
 npm install
