@@ -51,6 +51,10 @@ cp config.example.js config.js
 
 Edit `config.js` with your settings.
 
+```bash
+nano config.js
+```
+
 ---
 
 ## ▶️ Run
@@ -133,16 +137,16 @@ Your support helps me maintain and improve open-source projects.
 ### 🌟 Connect • Support • Follow 🌟
 
 <p>
-  <a href="https://github.com/YOUR_GITHUB_USERNAME">
+  <a href="https://github.com/Dev-ixAAr">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" />
   </a>
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME">
+  <a href="https://www.linkedin.com/in/benushika-ishra">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" />
   </a>
-  <a href="https://facebook.com/YOUR_USERNAME" target="_blank">
+  <a href="https://facebook.com/noob0dev" target="_blank">
   <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"/>
 </a>
-  <a href="https://instagram.com/YOUR_INSTAGRAM_USERNAME">
+  <a href="https://instagram.com/mr_noob_dev">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
   </a>
 </p>
