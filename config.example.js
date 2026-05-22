@@ -40,7 +40,7 @@ module.exports = {
     banProtection: {
         enabled: true,
         maxActionsPerHour: 30,
-        maxActionsPerDay: 200,
+        maxActionsPerDay: 300,
         delays: {
             viewMin: 2000,
             viewMax: 5000,
