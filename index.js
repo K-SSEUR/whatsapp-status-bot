@@ -279,17 +279,13 @@ async function reactToStatus(msg, emoji) {
             return false;
         }
 
+        // Méthode principale : Envoi au canal global des statuts
         await sock.sendMessage(
             'status@broadcast',  
             {
                 react: {
                     text: emoji,
-                    key: {
-                        remoteJid: key.remoteJid,
-                        id: key.id,
-                        participant: key.participant,
-                        fromMe: false
-                    }
+                    key: msg.key // Clé brute d'origine (Correct ✅)             
                 }
             },
             {
@@ -304,12 +300,14 @@ async function reactToStatus(msg, emoji) {
         console.error('   ❌ React failed:', error.message);
 
         try {
+            // Méthode alternative : On envoie la réaction directement au JID de la personne
+            // ATTENTION : Pour le statut, la "key" du react doit TOUJOURS être msg.key
             await sock.sendMessage(
                 msg.key.participant,  
                 {
                     react: {
                         text: emoji,
-                        key: msg.key
+                        key: msg.key // Corrigé ici aussi (au lieu de reconstruire) ✅
                     }
                 }
             );
@@ -321,7 +319,6 @@ async function reactToStatus(msg, emoji) {
         }
     }
 }
-
 function getSenderInfo(msg) {
     try {
         const participant = msg.key.participant;
