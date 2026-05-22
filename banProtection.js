@@ -44,14 +44,12 @@ class BanProtection {
         }, 3600000);
 
         setInterval(() => {
-            const now = new Date();
-            if (now.getHours() === config.banProtection.dailyResetHour) {
-                if (Date.now() - this.dailyResetTime > 82800000) { // 23 hours
-                    this.actionsToday = 0;
-                    this.dailyResetTime = Date.now();
-                    this.saveState();
-                    console.log('🔄 Daily action counter reset');
-                }
+            const now = Date.now(); // reset every 24h
+            if (now - this.dailyResetTime >= 86400000) {
+                this.actionsToday = 0;
+                this.dailyResetTime = now;
+                this.saveState();
+                console.log('🔄 Daily action counter reset');
             }
         }, 60000);
     }
